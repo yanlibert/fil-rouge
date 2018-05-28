@@ -4,7 +4,7 @@ Cette présentation est une application nodejs dont le  déployement sur notre C
 
 ## Creation du CaaS
 
-Nous avons choisi Kubernetes comme support qui va nous permettre de déployer et gérer nos conteneurs de manière efficace. Nous pourrions utiliser une solution tout en un (GKE ou AWS) mais le but de ce TP est d'apprendre. Alors apprenons !
+Nous avons choisi Kubernetes comme support qui va nous permettre de déployer et gérer nos conteneurs de manière efficace. Nous pourrions utiliser une solution tout-en-un (GKE ou AWS) mais le but de ce TP est d'apprendre. Alors apprenons !
 
 ### Postulat de départ
 
@@ -26,9 +26,9 @@ Etant donné le nombre de serveurs impliqués dans notre projet, les deux approc
 
 ### Quelques notions d'architecture
 
-Avant de se lancer tête baissée dans la création de notre cluster, il est nécessaire de bien en comprendre le fonctionnement. Cela nous aidera pour mettre en place les bonnes pratiques liées au déployement de nos applications. Nous allons nous baser sur une architecture standard de Kubernetes:
+Avant de se lancer tête baissée dans la création de notre cluster, il est nécessaire de bien en comprendre le fonctionnement. Cela nous aidera pour mettre en place les bonnes pratiques liées au déployement de nos applications. Nous allons nous baser sur une architecture standard de Kubernetes :
 
-
+![Architecture fil-rouge](./img/archi.jpg)
 
 ### Creation des instances GCP et AWS
 
