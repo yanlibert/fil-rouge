@@ -4,7 +4,17 @@ Cette présentation est une application nodejs dont le  déployement sur notre C
 
 ## Creation du CaaS
 
-Nous avons choisi Kubernetes comme support qui va nous permettre de déployer et gérer nos conteneurs de manière efficace.
+Nous avons choisi Kubernetes comme support qui va nous permettre de déployer et gérer nos conteneurs de manière efficace. Nous pourrions utiliser une solution tout en un (GKE ou AWS) mais le but de ce TP est d'apprendre. Alors apprenons !
+
+### Postulat de départ
+
+Nous avons à notre disposition 3 providers qui pourront nous fournir les machines dont nous avons besoin.
+
+- OVH : petite machine virtuelle payante. C'est celle qui as le plus de ressources. Elle soutiendra donc la machine maître (Master) de Kubernetes
+
+- GCP : la PaaS de google. L'abonnement d'un an gratuit nous permet de creer une petite instance qui servira de noeud (node) Kubernetes
+
+- AWS : la PaaS d'Amazon. Ici aussi l'instance virtuelle sera utilisé comme node.
 
 Pour créer le cluster qui sera composé de 3 machines, nous pouvons :
 
