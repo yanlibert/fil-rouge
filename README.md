@@ -8,7 +8,7 @@ Nous avons choisi Kubernetes comme support qui va nous permettre de déployer et
 
 ### Postulat de départ
 
-Nous avons à notre disposition 3 providers qui pourront nous fournir les machines dont nous avons besoin.
+Nous avons à notre disposition 3 providers qui nous fourniront les machines dont nous avons besoin.
 
 - OVH : petite machine virtuelle payante. C'est celle qui as le plus de ressources. Elle soutiendra donc la machine maître (Master) de Kubernetes
 
@@ -16,7 +16,7 @@ Nous avons à notre disposition 3 providers qui pourront nous fournir les machin
 
 - AWS : la PaaS d'Amazon. Ici aussi l'instance virtuelle sera utilisé comme node.
 
-Pour créer le cluster qui sera composé de 3 machines, nous pouvons :
+Pour créer le cluster qui sera donc composé de 3 machines, nous pouvons :
 
 - rester dans une optique classique et créer les instances sur les plateformes à la main puis installer les paquets nécessaires à Kubernetes
 
