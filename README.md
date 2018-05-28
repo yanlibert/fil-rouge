@@ -1,4 +1,4 @@
-### Presentation de fin de formation DevOps
+# Presentation de fin de formation DevOps
 
 Cette présentation est une application nodejs dont le  déployement sur notre CaaS Kubernetes va être entièrement automatisée selon la méthodologie DevOps.
 
@@ -14,6 +14,6 @@ Pour créer le cluster qui sera composé de 3 machines, nous pouvons :
 
 Etant donné le nombre de serveurs impliqués dans notre projet, les deux approches sont valables et réalisables dans des temps d'implémentation similaires. Nous avons choisi la deuxième méthode qui, en plus de son intérêt pédagogique évident, nous permet une mise à l'échelle rapide et facilité.
 
-# Creation des instances GCP et AWS
+### Creation des instances GCP et AWS
 
 Nous allons utiliser l'outils de création et de gestion d'infrastructures Terraform. 
