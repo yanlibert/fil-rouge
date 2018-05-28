@@ -12,5 +12,8 @@ Pour créer le cluster qui sera composé de 3 machines, nous pouvons :
 
 - honorer nos engagements d'automatisation dans l'esprit DevOps et utiliser des outils de création et d'approvisionnement des instances de support à Kubernetes.
 
-Etant donné le nombre de serveurs impliqués pour notre projet, les deux approches sont valables et réalisables dans des temps d'implémentation similaires. Nous avons choisi la deuxième méthode qui, en plus de son intérêt pédagogique évident, nous permet une mise à l'échelle rapide et facile.
+Etant donné le nombre de serveurs impliqués dans notre projet, les deux approches sont valables et réalisables dans des temps d'implémentation similaires. Nous avons choisi la deuxième méthode qui, en plus de son intérêt pédagogique évident, nous permet une mise à l'échelle rapide et facilité.
 
+# Creation des instances GCP et AWS
+
+Nous allons utiliser l'outils de création et de gestion d'infrastructures Terraform. 
