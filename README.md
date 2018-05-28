@@ -24,6 +24,12 @@ Pour créer le cluster qui sera donc composé de 3 machines, nous pouvons :
 
 Etant donné le nombre de serveurs impliqués dans notre projet, les deux approches sont valables et réalisables dans des temps d'implémentation similaires. Nous avons choisi la deuxième méthode qui, en plus de son intérêt pédagogique évident, nous permet une mise à l'échelle rapide et facilité.
 
+### Quelques notions d'architecture
+
+Avant de se lancer tête baissée dans la création de notre cluster, il est nécessaire de bien en comprendre le fonctionnement. Cela nous aidera pour mettre en place les bonnes pratiques liées au déployement de nos applications. Nous allons nous baser sur une architecture standard de Kubernetes:
+
+
+
 ### Creation des instances GCP et AWS
 
 Nous allons utiliser l'outils de création et de gestion d'infrastructures Terraform. 
