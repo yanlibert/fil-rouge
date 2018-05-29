@@ -50,6 +50,18 @@ Avant de se lancer tête baissée dans la création de notre cluster, il est né
 
 - Logging/ELK : la pile ElasticSearch, Logstash et Kibana qui va nous permettre d'avoir une solution d'analyse de log. 
 
+
+### Le Workflow
+> Git flow ou GitHub flow ? telle est la question...
+
+Afin de limiter le chaos qu'engendre le développement collaboratif, il est crucial de décider d'un bon "flux de travail" ou workflow qui va définir la manière de gérer le tous les aspects de développement du projet.
+Il existe plusieurs approches basées sur l'outil Git, le plus populaire étant Git flow.
+
+Adapté pour la méthodologie agile, Git flow permet de gérer l'ajout de multiples fonctionnalités de manière indépendante sans intéragir directement avec la branche master. 
+
+![Git flow](./img/giflow.png)
+
+
 ### Creation des instances GCP et AWS
 
 Nous allons utiliser l'outils de création et de gestion d'infrastructures Terraform. 
