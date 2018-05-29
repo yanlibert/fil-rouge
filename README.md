@@ -84,7 +84,7 @@ Les étapes de Github flow s'articulent de cette manière :
 
 Cette méthode va nous permettre des itérations rapides et des déploiement fréquents, ce qui sera vital étant donné le temps restreint alloué au projet.
 
-Maintenant que les objectifs et l'organisation du travail sont définis nous allons pouvoir nous attaquer à la construction de la structure.
+Maintenant que les objectifs et l'organisation du travail sont définis nous allons pouvoir nous attaquer à la construction du cluster Kubernetes.
 
 ### Creation des instances GCP et AWS
 
