@@ -1,6 +1,6 @@
 # Presentation de fin de formation DevOps
 
-Cette présentation est une application nodejs dont le  déployement sur notre CaaS Kubernetes va être entièrement automatisée selon la méthodologie DevOps. Sans compter la phase de préparation, ce projet est conçu pour être livré en 1 semaine par une équipe de 3 DevOps en herbe. 
+Cette présentation est une application nodejs dont le  déployement sur notre CaaS Kubernetes va être entièrement automatisée selon la méthodologie DevOps. Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois DevOps en herbe. 
 
 ## Phase de préparation
 
