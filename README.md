@@ -60,6 +60,7 @@ Il existe plusieurs approches basées sur l'outil Git, le plus populaire étant 
 Adapté pour la méthodologie agile, Git flow permet de gérer l'ajout de multiples fonctionnalités de manière indépendante sans intéragir directement avec la branche master. 
 
 ![Git flow](./img/gitflow.png)
+
 *Un exemple de git flow*
 
 Le git flow préconise l'utilisation d'une branche **master** et d'une branche **develop**. La branche master est la branche de production, elle porte les tags de version et les commit n'y sont pas fréquents. La branche develop est la branche des développeurs, elle sert de branche de base pour les features et les releases. S'ajoutent à ces branches de base des branches éphémères aux buts bien définis :
