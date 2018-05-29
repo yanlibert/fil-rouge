@@ -59,8 +59,31 @@ Il existe plusieurs approches basées sur l'outil Git, le plus populaire étant 
 
 Adapté pour la méthodologie agile, Git flow permet de gérer l'ajout de multiples fonctionnalités de manière indépendante sans intéragir directement avec la branche master. 
 
-![Git flow](./img/giflow.png)
+![Git flow](./img/gitflow.png)
+*Un exemple de git flow*
 
+Le git flow préconise l'utilisation d'une branche **master** et d'une branche **develop**. La branche master est la branche de production, elle porte les tags de version et les commit n'y sont pas fréquents. La branche develop est la branche des développeurs, elle sert de branche de base pour les features et les releases. S'ajoutent à ces branches de base des branches éphémères aux buts bien définis :
+- **feature** pour ajouter une fonctionnalité
+- **release** pour faire tampon entre la branche **develop** et la branche **master**
+- **hotfix** pour gérer les bugs en urgence directement depuis le **master**
+
+Si ces méthodes sont idéales pour une mise en production controlée et organisée, elles s'apparentent dans notre cas à l'utilisation d'un bazooka pour tuer une mouche. D'autant plus que cette gestion n'est pas idéale dans le cas de commit fréquents sur le master.
+
+Nous allons donc utiliser une version beaucoup plus légère appelée Github flow. En plus d'être plus intuitive et d'offrir une courbe d'apprentissage bien plus confortable, elle permet de gérer les processus de développement directement dans le navigateur, grâce à la puissance de Github.
+
+Les étapes de Github flow s'articulent de cette manière :
+
+- Création d'une branche depuis le repo
+- Créer, éditer, supprimer des fichiers
+- Envoyer une pull request  depuis la branche pour lancer une discussion entre dev
+- Continuer les modification en mettant à jour la pull request
+- Quand toutes les modifications sont prêtes, on les merge directement sur le master
+- On supprime la branche
+- rinse and repeat
+
+Cette méthode va nous permettre des itérations rapides et des déploiement fréquents, ce qui sera vital étant donné le temps restreint alloué au projet.
+
+Maintenant que les objectifs et l'organisation du travail sont définis nous allons pouvoir nous attaquer à la construction de la structure.
 
 ### Creation des instances GCP et AWS
 
