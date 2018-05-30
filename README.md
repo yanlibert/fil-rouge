@@ -12,9 +12,9 @@ Nous avons à notre disposition 3 providers qui nous fourniront les machines don
 
 - OVH : petite machine virtuelle payante. C'est celle qui as le plus de ressources. Elle soutiendra donc la machine maître (Master) de Kubernetes
 
-- GCP : la PaaS de google. L'abonnement d'un an gratuit nous permet de creer une petite instance qui servira de noeud (node) Kubernetes
+- GCP : IaaS de google. L'abonnement d'un an gratuit nous permet de creer une petite instance qui servira de noeud (node) Kubernetes
 
-- AWS : la PaaS d'Amazon. Ici aussi l'instance virtuelle sera utilisé comme node.
+- AWS : IaaS d'Amazon. Ici aussi l'instance virtuelle sera utilisé comme node.
 
 Pour créer le cluster qui sera donc composé de 3 machines, nous pouvons :
 
