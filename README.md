@@ -1,6 +1,8 @@
 # Presentation de fin de formation DevOps
 
-Cette présentation est une application nodejs dont le  déployement sur notre CaaS Kubernetes va être entièrement automatisée selon la méthodologie DevOps. Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois DevOps en herbe. 
+Le pinotage est un cépage Sud Africain très connu au Cap. On joue ici sur l'analogie entre la grappe de raisins et le cluster en informatique puisque tout le sujet de ce projet est la création d'une "grappe de serveurs" en bon français, plus communément appelé cluster comme support d'applications conteneurisées. 
+
+Notre présentation de fin de projet fait office elle-même d'application a déployer puisque c'est une application nodejs dont le  déployement sur notre CaaS Kubernetes va être entièrement automatisée selon la méthodologie DevOps. Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois DevOps en herbe. 
 
 ## Phase de préparation
 
