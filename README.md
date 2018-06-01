@@ -1,6 +1,6 @@
 # Petit POC DevOps
 
-Le pinotage est un cépage Sud Africain très connu au Cap. Mais bien qu'il soit en effet aussi ici question de grappe, nous en parlerons plutôt en terme de resources informatiques puisqu'un des sujets de ce projet est la création d'une "grappe de serveurs" en bon français. Plus communément appelé cluster, nous l'utiliserons comme plateforme de nos applications conteneurisées. 
+Le pinotage est un cépage Sud Africain très connu au Cap. Bien qu'il soit aussi ici question de grappe, nous en parlerons plutôt en terme de resources informatiques puisqu'un des sujets de ce projet est la création d'une "grappe de serveurs" en bon français. Plus communément appelé cluster, nous l'utiliserons comme plateforme de nos applications conteneurisées. 
 
 Mais au delà du support et des considérations techniques, c'est véritablement une méthodologie orientée vers la culture DevOps que nous allons tenter d'entretenir tout au long de notre projet.
 
