@@ -1,4 +1,4 @@
-# Presentation de fin de formation DevOps
+# Petit POC DevOps
 
 Le pinotage est un cépage Sud Africain très connu au Cap. Mais bien qu'il soit en effet aussi ici question de grappe, nous en parlerons plutôt en terme de resources informatiques puisqu'un des sujets de ce projet est la création d'une "grappe de serveurs" en bon français. Plus communément appelé cluster, nous l'utiliserons comme plateforme de nos applications conteneurisées. 
 
@@ -17,6 +17,8 @@ En revanche, il est vrai qu'une bonne maîtrise des outils favorise à entreteni
 Mais voilà : loin d'être des miracles, ces tâches ne peuvent réussir que si elles sont préparées avec soin selon une méthodologie standardisée très rigoureuse qui n'accepte que peu de compromis. C'est l'esprit DevOps, l'automatisation poussée à son paroxysme qui en théorie permettrait de developper une application sans coder une seule ligne. 
 
 C'est d'ailleur ce que nous allons tenter dans ce projet. Notre objectif est de produire une application et son infrastructure qui la supporte sans générer une seule ligne de code dans le language natif de l'application. Dans ce cas précis, nous allons tenter de développer une application NodeJS sans écrire une seule ligne de Javascript.
+
+*Accrochez vos ceintures, on passe en mode full DevOps*
 
 ## Phase de préparation
 
