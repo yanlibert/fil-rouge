@@ -33,13 +33,13 @@ Pour accueillir notre application, nous avons besoin d'une plateforme. Et nous a
 
 Pour ce projet, l'utilisation de conteneurs permet un déployment rapide et un gain de temps non négligeable sur toute la partie de mise en place et de configuration des applications. Par exemple, s'il nous faut un serveur Share Latex pour éditer notre rapport de projet, il suffira d'appeler un conteneur qui contiendra une image de Share Latex prête à l'emploi. 
 
-Tout naturellement, pour gérer nos conteneurs nous utiliserons Docker qui en plus d'offrir une solution stable, elle est largement supportée  et documentée par une énorme communauté.
+Tout naturellement, pour gérer nos conteneurs nous utiliserons Docker. En plus d'offrir une solution stable, elle est largement supportée et documentée par une énorme communauté.
 
-Au delà de la création de conteneurs, et puisque nous voulons automatiser au maximum les processus, nous aimerions une solution qui va gérer nos conteneurs, les répartir sur nos machines selon leur ressources, surveiller leur santé et veiller à ce qu'ils soient toujours en fonction. Parce que le DevOps est très fainéant... 
+Au delà de la création de conteneurs, et puisque nous voulons automatiser au maximum les processus, nous pourrions utiliser une solution qui va gérer nos conteneurs, les répartir sur nos machines selon leur ressources, surveiller leur santé et veiller à ce qu'ils soient toujours en fonction. 
 
+> Parce qu'il ne faut pas oublier qu'une des qualités premières du DevOps est qu'il est très fainéant... 
 
-La guerre des CaaS (Container as a Service) entre ...TBC...
-Nous avons choisi Kubernetes comme support qui va nous permettre de déployer et gérer nos conteneurs de manière efficace. 
+Depuis peu, un acteur se détache de la guerre des orchestrateurs de conteneurs entre Kubernetes, Docker Swarm, OpenShift et d'autres. Kubernetes est supporté par une enorme communauté, offre une API solide et une grande flexibilité. L'envers de la médaille c'est qu'il faut un peu d'huile de coude pour tout mettre en place. 
 
 Nous pourrions utiliser une solution tout-en-un (GKE ou AWS) mais le but de ce TP est d'apprendre. Alors apprenons !
 
