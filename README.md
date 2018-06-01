@@ -29,7 +29,7 @@ C'est d'ailleur ce que nous allons tenter dans ce projet. Notre objectif est de 
 
 ## Phase de préparation
 
-Pour accueillir notre application, nous avons besoin d'une plateforme. Et nous avons le choix ! Entre les IaaS, les PaaS, les CaaS, les SaaS et j'en passe, l'offre de services n'a jamais été aussi fournie. Notre objectif est d'explorer les techniques d'automatisation en gardant une approche la plus agnostique possible et un contrôle absolu de la pile (ou stack). 
+Pour accueillir notre application, nous avons besoin d'une plateforme. Et nous avons le choix ! Entre les IaaS, les PaaS, les CaaS, les SaaS et j'en passe, l'offre de services n'a jamais été aussi fournie. Pour faire notre choix, gardons à l'esprit que notre objectif est d'explorer les techniques d'automatisation en gardant une approche la plus agnostique possible et un contrôle complet des différentes couches logicielles (on parlera de stack par la suite). 
 
 Pour ce projet, l'utilisation de conteneurs permet un déployment rapide et un gain de temps non négligeable sur toute la partie de mise en place et de configuration des applications. Par exemple, s'il nous faut un serveur Share Latex pour éditer notre rapport de projet, il suffira d'appeler un conteneur qui contiendra une image de Share Latex prête à l'emploi. 
 
