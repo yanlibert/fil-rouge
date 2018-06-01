@@ -20,10 +20,13 @@ C'est d'ailleur ce que nous allons tenter dans ce projet. Notre objectif est de 
 
 *Accrochez vos ceintures, on passe en mode full DevOps*
 <p align="center">
-  <img width="460" height="300" src="./img/fulldevops.jpg">
+  <img height="350" src="./img/fulldevops.jpg">
 </p>
 
 ## Phase de préparation
+
+Pour accueillir notre application, nous avons besoin d'une plateforme. Et nous avons le choix ! Entre les IaaS, les PaaS, les CaaS, les SaaS et je passe, l'offre de services n'a jamais été aussi fournie. L'objectif de ce projet est d'explorer les techniques d'automatisation en utilisant le plus possible d'outils indépendants des plateformes 
+
 
 Nous avons choisi Kubernetes comme support qui va nous permettre de déployer et gérer nos conteneurs de manière efficace. Nous pourrions utiliser une solution tout-en-un (GKE ou AWS) mais le but de ce TP est d'apprendre. Alors apprenons !
 
