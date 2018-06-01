@@ -98,6 +98,8 @@ Les étapes de Github flow s'articulent de cette manière :
 - On supprime la branche
 - Rinse and repeat
 
+> Ou alors quand on est admin, on commit directement sur la branche master comme un cochon en faisant fi des toutes les règles (bon.. si c'est pour update le Readme on va pas m'en vouloir... Si ?)
+
 Cette méthode va nous permettre des itérations rapides et des déploiement fréquents, ce qui sera vital étant donné le temps restreint alloué au projet.
 
 Maintenant que les objectifs et l'organisation du travail sont définis nous allons pouvoir nous attaquer à la construction du cluster Kubernetes.
