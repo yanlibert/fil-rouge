@@ -1,8 +1,22 @@
 # Presentation de fin de formation DevOps
 
-Le pinotage est un cépage Sud Africain très connu au Cap. On joue ici sur l'analogie entre la grappe de raisins et le cluster en informatique puisque tout le sujet de ce projet est la création d'une "grappe de serveurs" en bon français, plus communément appelé cluster, comme support d'applications conteneurisées. 
+Le pinotage est un cépage Sud Africain très connu au Cap. Mais bien qu'il soit en effet aussi ici question de grappe, nous en parlerons plutôt en terme de resources informatiques puisqu'un des sujets de ce projet est la création d'une "grappe de serveurs" en bon français. Plus communément appelé cluster, nous l'utiliserons comme plateforme de nos applications conteneurisées. 
 
-Notre présentation de fin de projet fait office elle-même d'application a déployer puisque c'est une application nodejs dont le  déployement sur notre CaaS Kubernetes va être entièrement automatisée selon la méthodologie DevOps. Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois DevOps en herbe. 
+Mais au delà du support et des considérations techniques, c'est bien par une méthodologie orientée vers la culture DevOps que nous allons tenter de développer tout au long de notre projet.
+
+Dans cet esprit, c'est notre présentation de fin de projet qui va faire office d'une des applications a déployer. C'est une application nodejs dont le  déployement sur notre cluster fait maison va être entièrement automatisée selon la méthodologie DevOps. 
+
+Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois adeptes DevOps en herbe. 
+
+## Sexy \#DevOps
+
+La méthodologie DevOps est très en vogue en ce moment. Tout le monde s'arrache "les DevOps" et bien des acteurs s'approprient ce terme. On parle de méthodologie, de philosophie, de culture, voir même de culte tout court dans certains [cercles](https://devops.com/devops-like-fitness-religion/)... De même qu'on ne peut pas se revendiquer "geek" parce qu'on aime regarder The Big Bang Theory, on n'est pas DevOps parce qu'on utilise Maven pour empaqueter une application Java. 
+
+En revanche, il est vrai qu'une bonne maîtrise des outils favorise à entretenir le mythe. Quand un DevOps claque des doigts, des instances se créent dans le cloud, des cluster se forment, des applications se déploient et des mises à l'échelle s'implémentent toutes seules. 
+
+Mais voilà : loin d'être des miracles, ces tâches ne peuvent réussir que si elles sont préparées avec soin selon une méthodologie standardisée qui n'accepte que peu de compromis. C'est l'esprit DevOps, l'automatisation poussée à son paroxysme qui en théorie permettrait de developper une application sans coder une seule ligne. 
+
+C'est d'ailleur ce que nous allons tenter dans ce projet. Notre objectif est de produire une application et son infrastructure qui la supporte sans générer une seule ligne de code dans le language natif de l'application. Dans ce cas précis, nous allons tenter de développer une application NodeJS sans écrire une seule ligne de Javascript.
 
 ## Phase de préparation
 
