@@ -20,6 +20,8 @@ C'est d'ailleur ce que nous allons tenter dans ce projet. Notre objectif est de 
 
 *Accrochez vos ceintures, on passe en mode full DevOps*
 
+![Never go full DevOps](./img/fulldevops.jpg)
+
 ## Phase de préparation
 
 Nous avons choisi Kubernetes comme support qui va nous permettre de déployer et gérer nos conteneurs de manière efficace. Nous pourrions utiliser une solution tout-en-un (GKE ou AWS) mais le but de ce TP est d'apprendre. Alors apprenons !
