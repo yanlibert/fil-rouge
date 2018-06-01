@@ -20,7 +20,7 @@ C'est d'ailleur ce que nous allons tenter dans ce projet. Notre objectif est de 
 
 *Accrochez vos ceintures, on passe en mode full DevOps*
 <p align="center">
-  <img width="460" height="300" src="./img/fulldevops.jp">
+  <img width="460" height="300" src="./img/fulldevops.jpg">
 </p>
 
 ## Phase de préparation
