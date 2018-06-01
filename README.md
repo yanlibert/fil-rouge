@@ -35,13 +35,13 @@ Pour ce projet, l'utilisation de conteneurs permet un déployment rapide et un g
 
 Tout naturellement, pour gérer nos conteneurs nous utiliserons Docker. En plus d'offrir une solution stable, elle est largement supportée et documentée par une énorme communauté.
 
-Au delà de la création de conteneurs, et puisque nous voulons automatiser au maximum les processus, nous pourrions utiliser une solution qui va gérer nos conteneurs, les répartir sur nos machines selon leur ressources, surveiller leur santé et veiller à ce qu'ils soient toujours en fonction. 
+Au delà de la création de conteneurs, et puisque nous voulons automatiser au maximum les processus, pourquoi ne pas utiliser une solution qui va gérer nos conteneurs, les répartir sur nos machines selon leur ressources, surveiller leur santé et veiller à ce qu'ils soient toujours en fonction. 
 
 > Parce qu'il ne faut pas oublier qu'une des qualités premières du DevOps est qu'il est très fainéant... 
 
 Depuis peu, un acteur se détache de la guerre des orchestrateurs de conteneurs entre Kubernetes, Docker Swarm, OpenShift et d'autres. Kubernetes est supporté par une enorme communauté, offre une API solide et une grande flexibilité. L'envers de la médaille c'est qu'il faut un peu d'huile de coude pour tout mettre en place. 
 
-Nous pourrions utiliser une solution tout-en-un (GKE ou AWS) mais le but de ce TP est d'apprendre. Alors apprenons !
+Nous pourrions utiliser une solution tout-en-un (GKE ou AWS) mais le but de ce projet est d'apprendre. Alors apprenons !
 
 ### Postulat de départ
 
@@ -49,9 +49,9 @@ Nous avons à notre disposition 3 providers qui nous fourniront les machines don
 
 - OVH : petite machine virtuelle payante. C'est celle qui as le plus de ressources. Elle soutiendra donc la machine maître (Master) de Kubernetes
 
-- GCP : IaaS de google. L'abonnement d'un an gratuit nous permet de creer une petite instance qui servira de noeud (node) Kubernetes
+- GCP : les services d'infrastructure de google. L'abonnement d'un an gratuit nous permet de creer une petite instance qui servira de noeud (node) Kubernetes
 
-- AWS : IaaS d'Amazon. Ici aussi l'instance virtuelle sera utilisé comme node.
+- AWS : la version d'Amazon. Ici aussi une petite instance virtuelle sera utilisé comme node.
 
 Pour créer le cluster qui sera donc composé de 3 machines, nous pouvons :
 
