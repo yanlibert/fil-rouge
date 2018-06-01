@@ -20,7 +20,7 @@ C'est d'ailleur ce que nous allons tenter dans ce projet. Notre objectif est de 
 
 *Accrochez vos ceintures, on passe en mode full DevOps*
 
-![Never go full DevOps](./img/fulldevops.jpg)
+<center>![Never go full DevOps](./img/fulldevops.jpg)</center>
 
 ## Phase de préparation
 
