@@ -4,7 +4,7 @@ Le pinotage est un cépage Sud Africain très connu au Cap. Bien qu'il soit auss
 
 Mais au delà du support et des considérations techniques, c'est véritablement une méthodologie orientée vers la culture DevOps que nous allons tenter d'entretenir tout au long de notre projet.
 
-Dans cet esprit, c'est notre présentation de fin de projet qui va faire office d'une des applications a déployer. C'est une application nodejs dont le  déployement sur notre cluster fait maison va être entièrement automatisée selon la méthodologie DevOps. 
+Dans cet esprit, c'est notre présentation de fin de projet qui va faire office de l'application principale a déployer. C'est une application nodejs dont le  déployement sur notre cluster fait maison va être entièrement automatisée selon la méthodologie DevOps. 
 
 Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois adeptes DevOps en herbe. 
 
