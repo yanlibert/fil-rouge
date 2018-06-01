@@ -19,8 +19,9 @@ Mais voilà : loin d'être des miracles, ces tâches ne peuvent réussir que si 
 C'est d'ailleur ce que nous allons tenter dans ce projet. Notre objectif est de produire une application et son infrastructure qui la supporte sans générer une seule ligne de code dans le language natif de l'application. Dans ce cas précis, nous allons tenter de développer une application NodeJS sans écrire une seule ligne de Javascript.
 
 *Accrochez vos ceintures, on passe en mode full DevOps*
-
-<center>![Never go full DevOps](./img/fulldevops.jpg)</center>
+<p align="center">
+  <img width="460" height="300" src="./img/fulldevops.jp">
+</p>
 
 ## Phase de préparation
 
