@@ -27,7 +27,7 @@ app.use(express.static(__dirname + '/public'));
 // This is a secret key that prevents others from opening your presentation
 // and controlling it. Change it to something that only you know.
 
-var secret = 'devplops';
+var secret = 'devmops';
 
 // Initialize a new socket.io application
 
