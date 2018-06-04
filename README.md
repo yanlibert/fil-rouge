@@ -45,21 +45,13 @@ Nous pourrions utiliser une solution tout-en-un (GKE ou AWS) mais le but de ce p
 
 ### Postulat de départ
 
-Nous avons à notre disposition 3 providers qui nous fourniront les machines dont nous avons besoin.
+Nous avons à notre disposition 3 machines connectées à un réseau local. Nous pouvons :
 
-- OVH : petite machine virtuelle payante. C'est celle qui as le plus de ressources. Elle soutiendra donc la machine maître (Master) de Kubernetes
-
-- GCP : les services d'infrastructure de google. L'abonnement d'un an gratuit nous permet de creer une petite instance qui servira de noeud (node) Kubernetes
-
-- AWS : la version d'Amazon. Ici aussi une petite instance virtuelle sera utilisé comme node.
-
-Pour créer le cluster qui sera donc composé de 3 machines, nous pouvons :
-
-- rester dans une optique classique et créer les instances sur les plateformes à la main puis installer les paquets nécessaires à Kubernetes
+- rester dans une optique classique et créer des machines virtuelles à la main puis installer les paquets nécessaires à Kubernetes
 
 - honorer nos engagements d'automatisation dans l'esprit DevOps et utiliser des outils de création et d'approvisionnement des instances de support à Kubernetes.
 
-Etant donné le nombre de serveurs impliqués dans notre projet, les deux approches sont valables et réalisables dans des temps d'implémentation similaires. Nous avons choisi la deuxième méthode qui, en plus de son intérêt pédagogique évident, nous permet une mise à l'échelle rapide et facilité.
+Etant donné le nombre de nodes impliqués dans notre projet, les deux approches sont valables et réalisables dans des temps d'implémentation similaires. Nous avons choisi la deuxième méthode qui, en plus de son intérêt pédagogique évident, nous permet une mise à l'échelle rapide et facilité.
 
 ### Quelques notions d'architecture
 
@@ -125,6 +117,14 @@ Cette méthode va nous permettre des itérations rapides et des déploiement fr�
 
 Maintenant que les objectifs et l'organisation du travail sont définis nous allons pouvoir nous attaquer à la construction du cluster Kubernetes.
 
-### Creation des instances GCP et AWS
+### Creation des machines virtuelles
 
-Nous allons utiliser l'outils de création et de gestion d'infrastructures Terraform. 
+Pour pouvoir créer des environnements de travail similaires à toute l'équipe, nous allons utiliser une image Ubuntu customisée avec Packer. 
+
+Packer permet de créer et répliquer des machines virtuelles à l'aide de fichiers de configuration JSON. Pour créer les machines virtuelles, il suffit de lancer la commande :
+
+```sh 
+packer packer.json
+```
+
+Le fichier [packer.json](./packer/packer.json) permet de provisionner une VM avec le script [setup.sh](./packer/scripts/setup.sh) qui installe ```kubeadm``` et toutes ses dépendances
