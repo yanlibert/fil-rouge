@@ -1,0 +1,6 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "dev2ops/kube"
+  config.vm.network "public_network", bridge: "enp0s31f6"
+  config.vm.box_version = "0.1"
+  config.vm.hostname = "master"
+end
