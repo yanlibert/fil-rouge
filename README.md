@@ -172,6 +172,14 @@ Nous avons donc 3 instances réutilisables à volonté si jamais le cluster ne f
 ## Création du cluster Kubernetes 
 
 ### Master
+
+En utilisant le [Vagrantfile](./vagrant/Vagrantfile-master) pour le master, on crée la VM en executant la commande :
+```sh
+vagrant up
+```
+
+> Remarque : par défaut la box utilise 1GB de mémoire RAM, ce qui est insuffisant pour le master. C'est pour cela qu'il y a une instruction de mémoire dans le Vagrantfile.
+
 Sur le master, on lance un 
 ```sh
 sudo kubeadm init
@@ -179,7 +187,7 @@ sudo kubeadm init
 Si le cluster se lance sur l'ip interne au lieu de l'ip externe, relancer l'init avec la commande 
 
 ```sh
-sudo kubeadm init --apiserver-advertise-address 192.168.11.99
+sudo kubeadm init --apiserver-advertise-address <ip de la machine>
 ```
 
 Si le process s'interrompt, il est possible que la swap soit encore active sur le système. On peut la désactiver par la commande :
