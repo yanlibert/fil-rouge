@@ -123,7 +123,7 @@ Cette méthode va nous permettre des itérations rapides et des déploiement fr�
 
 Maintenant que les objectifs et l'organisation du travail sont définis nous allons pouvoir nous attaquer à la construction du cluster Kubernetes.
 
-### Creation des machines virtuelles
+## Creation des machines virtuelles
 
 Pour pouvoir créer des environnements de travail similaires à toute l'équipe, nous allons utiliser une image Ubuntu customisée avec Packer. 
 
@@ -147,7 +147,7 @@ Si la box n'a pas encore téléchargée, vagrant va la chercher sur Vagrant Clou
 
 Nous avons donc 3 instances réutilisables à volonté si jamais le cluster ne fonctionne plus : 1 master et 2 nodes.
 
-### Création du cluster Kubernetes 
+## Création du cluster Kubernetes 
 
 Sur le master, on lance un 
 ```sh
