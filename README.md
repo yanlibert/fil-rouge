@@ -180,7 +180,13 @@ vagrant up
 
 > Remarque : par défaut la box utilise 1GB de mémoire RAM, ce qui est insuffisant pour le master. C'est pour cela qu'il y a une instruction de mémoire dans le Vagrantfile.
 
-Sur le master, on lance un 
+Pour se connecter à la machine, il suffit d'executer :
+
+```sh
+vagrant ssh
+```
+
+Une fois connecté sur le master, on peut initialiser le cluster : 
 ```sh
 sudo kubeadm init
 ```
