@@ -171,6 +171,7 @@ Nous avons donc 3 instances réutilisables à volonté si jamais le cluster ne f
 
 ## Création du cluster Kubernetes 
 
+### Master
 Sur le master, on lance un 
 ```sh
 sudo kubeadm init
@@ -188,6 +189,14 @@ sudo swapoff -a
 ```
 
 > Il faut le faire aussi sur les nodes si besoin. 
+
+Ensuite on rajoute un réseau entre pod (qui ne fait pas partie de l'install de base de Kubernetes). Nous avons choisi Weave Net :
+
+```sh
+sudo sysctl net.bridge.bridge-nf-call-iptables=1
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+kubectl get pods --all-namespaces
+```
 
 A la fin de l'initialisation, executer les commandes indiquées et copier la commande ```kubeadm join``` pour joindre les noeuds au cluster. 
 
