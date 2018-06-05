@@ -206,6 +206,13 @@ Sur les nodes, lancer la commande ```kubeadm join``` avec le token fourni à la 
 sudo kubeadm token create --print-join-command
 ```
 
+Si quelque chose ne se passe pas bien et que l'on a besoin de supprimer un noeud :
+
+```sh
+kubectl drain <nodename> --delete-local-data --force --ignore-daemonset
+kubectl delete node <nodename>
+```
+
 Pour sauvegarder les deployments effectués sur le cluster :
 ```sh
 kubectl get all --export=true -o yaml
