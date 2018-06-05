@@ -223,7 +223,7 @@ sudo kubeadm token create --print-join-command
 Si quelque chose ne se passe pas bien et que l'on a besoin de supprimer un noeud :
 
 ```sh
-kubectl drain <nodename> --delete-local-data --force --ignore-daemonset
+kubectl drain <nodename> --delete-local-data --force --ignore-daemonsets
 kubectl delete node <nodename>
 ```
 
