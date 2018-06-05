@@ -190,3 +190,8 @@ Sur les nodes, lancer la commande ```kubeadm join``` avec le token fourni à la 
 ```sh
 sudo kubeadm token create --print-join-command
 ```
+
+Pour sauvegarder les deployments effectués sur le cluster :
+```sh
+kubectl get all --export=true -o yaml
+```
