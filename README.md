@@ -9,7 +9,6 @@ Dans cet esprit, c'est notre présentation de fin de projet qui va faire office 
 Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois adeptes DevOps en herbe. 
 
 ## Table des matières
-=====================
 
    * [Petit POC DevOps](#petit-poc-devops)
       * [Table des matières](#table-des-matières)
