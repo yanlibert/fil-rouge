@@ -9,6 +9,19 @@ Dans cet esprit, c'est notre présentation de fin de projet qui va faire office 
 Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois adeptes DevOps en herbe. 
 
 ## Table des matières
+=====================
+
+   * [Petit POC DevOps](#petit-poc-devops)
+      * [Table des matières](#table-des-matières)
+      * [Les membres de l'équipe](#les-membres-de-léquipe)
+      * [Sexy #DevOps](#sexy-devops)
+      * [Phase de préparation](#phase-de-préparation)
+         * [Postulat de départ](#postulat-de-départ)
+         * [Quelques notions d'architecture](#quelques-notions-darchitecture)
+         * [Le Workflow](#le-workflow)
+      * [Creation des machines virtuelles](#creation-des-machines-virtuelles)
+         * [Stockage de la box sur Vagrant Cloud](#stockage-de-la-box-sur-vagrant-cloud)
+      * [Création du cluster Kubernetes](#création-du-cluster-kubernetes)
 
 ## Les membres de l'équipe
 
