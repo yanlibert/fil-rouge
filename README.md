@@ -241,3 +241,12 @@ Pour sauvegarder les deployments effectués sur le cluster :
 ```sh
 kubectl get all --export=true -o yaml
 ```
+
+Pour voir les déployements sur le cluster :
+```sh
+kubectl get deployments
+```
+
+## Installation de Share Latex sur le cluster
+
+Share Latex va nous permettre de rédiger un rapport de projet de manière collaboratif. Sur le [github](https://github.com/sharelatex/sharelatex/wiki/Quick-Start-Guide) du projet nous avons à notre disposition un fichier Docker Compose. Il est possible d'adapter ce fichier pour créer un déployement sur notre cluster. 
