@@ -8,6 +8,16 @@ Dans cet esprit, c'est notre présentation de fin de projet qui va faire office 
 
 Sans compter la phase de préparation, ce projet est conçu pour être livré en une semaine par une équipe de trois adeptes DevOps en herbe. 
 
+## Table des matières
+
+## Les membres de l'équipe
+
+[Yannick Libert](https://github.com/yanlibert) @yanlibert
+
+[Romain Delissen](https://github.com/Seiro10) @Seiro10
+
+[Fabian Donini](https://github.com/FabDnn) @FabDnn
+
 ## Sexy \#DevOps
 
 La méthodologie DevOps est très en vogue en ce moment. Tout le monde s'arrache "les DevOps" et bien des acteurs s'approprient ce terme. On parle de méthodologie, de philosophie, de culture, voir même de culte tout court dans certains [cercles](https://devops.com/devops-like-fitness-religion/)... De même qu'on ne peut pas se revendiquer "geek" parce qu'on aime regarder The Big Bang Theory, on n'est pas DevOps parce qu'on utilise Maven pour empaqueter une application Java. Et on n'est certainement pas "full DevOps" parce qu'on utilise Docker...
