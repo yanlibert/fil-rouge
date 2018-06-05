@@ -88,7 +88,9 @@ Il existe plusieurs approches basées sur l'outil Git, le plus populaire étant 
 
 Adapté pour la méthodologie agile, Git flow permet de gérer l'ajout de multiples fonctionnalités de manière indépendante sans intéragir directement avec la branche master. 
 
-![Git flow](./img/gitflow.png)
+<p align="center">
+  <img src="./img/gitflow.png">
+</p>
 
 *Un exemple de git flow*
 
@@ -100,6 +102,10 @@ Le git flow préconise l'utilisation d'une branche **master** et d'une branche *
 Si ces méthodes sont idéales pour une mise en production controlée et organisée, elles s'apparentent dans notre cas à l'utilisation d'un bazooka pour tuer une mouche. D'autant plus que cette gestion n'est pas idéale dans le cas de commit fréquents sur le master.
 
 Nous allons donc utiliser une version beaucoup plus légère appelée **Github flow**. En plus d'être plus intuitive et d'offrir une courbe d'apprentissage bien plus confortable, elle permet de gérer les processus de développement directement dans le navigateur, grâce à la puissance de Github.
+
+<p align="center">
+  <img height="180" src="./img/githubflow.png">
+</p>
 
 Les étapes de Github flow s'articulent de cette manière :
 
