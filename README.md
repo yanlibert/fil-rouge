@@ -128,3 +128,37 @@ packer packer.json
 ```
 
 Le fichier [packer.json](./packer/packer.json) permet de provisionner une VM avec le script [setup.sh](./packer/scripts/setup.sh) qui installe ```kubeadm``` et toutes ses dépendances
+
+### Stockage de la box sur Vagrant Cloud
+
+Notre box générée par Packer a été uploadée sur le Vagrant Cloud à l'adresse suivante : [https://app.vagrantup.com/dev2ops/boxes/kube](https://app.vagrantup.com/dev2ops/boxes/kube). De ce fait il est possible de la télécharger depuis n'importe où grâce aux fichiers Vagrantfile fournie dans le projet. Il suffit de copier le fichier dans le répertoire courant et de lancer :
+
+```sh
+vagrant up
+```
+
+Si la box n'a pas encore téléchargée, vagrant va la chercher sur Vagrant Cloud pour la stocker localement afin de l'utiliser plus rapidement la prochaine fois.
+
+Nous avons donc 3 instances réutilisables à volonté si jamais le cluster ne fonctionne plus : 1 master et 2 nodes.
+
+### Création du cluster Kubernetes 
+
+Sur le master, on lance un 
+```sh
+sudo kubeadm init
+```
+Si le process s'interrompt, il est possible que la swap soit encore active sur le système. On peut la désactiver par la commande :
+
+```sh
+sudo swapoff -a
+```
+
+> Il faut le faire aussi sur les nodes si besoin. 
+
+A la fin de l'initialisation, executer les commandes indiquées et copier la commande ```kubeadm join``` pour joindre les noeuds au cluster. 
+
+Sur les nodes, lancer la commande ```kubeadm join``` avec le token fourni à la création du cluster. Si il y a besoin de regénérer des token parce que celui d'origine a expiré, on peut en creer d'autre avec la commande : 
+
+```sh
+sudo kubeadm token create --print-join-command
+```
