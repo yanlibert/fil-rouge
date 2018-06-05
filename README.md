@@ -175,6 +175,12 @@ Sur le master, on lance un
 ```sh
 sudo kubeadm init
 ```
+Si le cluster se lance sur l'ip interne au lieu de l'ip externe, relancer l'init avec la commande 
+
+```sh
+sudo kubeadm init --apiserver-advertise-address 192.168.11.99
+```
+
 Si le process s'interrompt, il est possible que la swap soit encore active sur le système. On peut la désactiver par la commande :
 
 ```sh
