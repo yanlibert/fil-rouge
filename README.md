@@ -227,6 +227,16 @@ kubectl drain <nodename> --delete-local-data --force --ignore-daemonset
 kubectl delete node <nodename>
 ```
 
+Pour surveiller l'état du cluster, on peut utiliser la commande ```watch``` combinée aux commandes d'étât du cluser. Par exemple :
+
+```sh
+watch kubectl get nodes
+```
+et 
+```sh
+watch kubectl get pods --all-namespaces
+```
+
 Pour sauvegarder les deployments effectués sur le cluster :
 ```sh
 kubectl get all --export=true -o yaml
