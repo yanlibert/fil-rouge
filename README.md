@@ -241,7 +241,11 @@ Pour sauvegarder les deployments effectués sur le cluster :
 ```sh
 kubectl get all --export=true -o yaml
 ```
+Pour mettre le role node sur un node :
 
+```sh
+kubectl label node fabian node-role.kubernetes.io/node=
+```
 Pour voir les déployements sur le cluster :
 ```sh
 kubectl get deployments
