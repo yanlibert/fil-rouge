@@ -363,7 +363,7 @@ Share Latex va nous permettre de rédiger un rapport de projet de manière colla
 
 Nous allons nous baser sur le tutoriel disponible [ici](https://www.blazemeter.com/blog/how-to-setup-scalable-jenkins-on-top-of-a-kubernetes-cluster) que nous allons adapter pour ```kubeadm```.
 
-L'image Jenkins que nous allons utiliser a été crée à l'aide du [Dockerfile](./jenkins/Dockerfile) et uploadée sur [dockerhub](https://hub.docker.com/r/fabiando/jenkins-deploy/). Il est donc facile de déployer Jenkins sur notre cluster à l'aide du fichier [jenkins-deployment.yaml](./jenkins/jenkins-deployment.yaml) fourni dans le repo.
+L'image Jenkins que nous allons utiliser a été crée à l'aide du [Dockerfile](./jenkins/Dockerfile) et uploadée sur [dockerhub](https://hub.docker.com/r/fabiando/jenkin2). Il est donc facile de déployer Jenkins sur notre cluster à l'aide du fichier [jenkins-deployment.yaml](./jenkins/jenkins-deployment.yaml) fourni dans le repo.
 
 On déploie Jenkins en executant :
 ```sh 
