@@ -319,6 +319,9 @@ ip route list
 ```txt
 default via 192.168.11.254 dev eth1 
 ```
+
+Merci à James Baltar qui indique comment changer d'interface par défaut [ici.](https://www.jamesbaltar.com/set-default-network-interface-in-ubuntu)
+
 Il faut faire ce changement sur toutes les machines virtuelles de notre cluster. 
 
 > TODO: ajouter ces modifications dans le packer.json
