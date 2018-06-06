@@ -357,7 +357,45 @@ kubectl delete deployment hello-world
 
 ## Installation de Share Latex sur le cluster
 
-Share Latex va nous permettre de rédiger un rapport de projet de manière collaboratif. Sur le [github](https://github.com/sharelatex/sharelatex/wiki/Quick-Start-Guide) du projet nous avons à notre disposition un fichier Docker Compose. Il est possible d'adapter ce fichier pour créer un déployement sur notre cluster. 
+Share Latex va nous permettre de rédiger un rapport de projet de manière collaboratif.
+Pour fonctionner, Share Latex à besoin de MongoDb (une base de donnée NOSQL) et de Redis (une base de données basée sur le principe clef => valeur).
+
+Pour déployer ces dépendances, nous allons créer 3 fichier de déploiment sur le Master (YAML) (liens vers les fichiers).
+Les fichiers concernant le deploiement de Mongo et Redis auront deux fonctions principales :
+
+1)Créer un service
+Pour répondre à la problématique de réplication, nous devons regrouper nos pods via un service.
+Ce service va agir comme un nom de domaine et sera capable de gérer le load balancing.
+
+2)Créer le déploiement
+Cette étape consiste à configurer le pod en définissant notamment l'image qui sera utilisée, les ports nescessaires au bon fonctionnement de l'application, les variables d' environnement etc ...
+
+La création de fichiers étant terminé, nous pouvons passer au déploiement en ligne de commandes.
+
+Déploiement de Mongo : 
+
+kubectl create -f deployment-Mongo.yaml
+
+Déploiement de Redis : 
+
+kubectl create -f deployment-Redis.yaml
+
+Déploiement de Share Latex : 
+
+kubectl create -f deployment-Sharelatex.yaml
+
+Informations sur les pods déployés : 
+
+kubectl get pods
+
+Informations détaillées sur un pod : 
+
+kubectl logs [nom du pod]
+
+Nous pouvons maintenant voir si Share Latex est joignable : 
+
+
+
 
 ## Installation de Jenkins
 
