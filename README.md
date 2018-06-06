@@ -359,9 +359,31 @@ Nous allons nous baser sur le tutoriel disponible [ici](https://www.blazemeter.c
 
 L'image Jenkins que nous allons utiliser a été crée à l'aide du [Dockerfile](./jenkins/Dockerfile) et uploadée sur [dockerhub](https://hub.docker.com/r/fabiando/jenkins-deploy/). Il est donc facile de déployer Jenkins sur notre cluster à l'aide du fichier [jenkins-deployment.yaml](./jenkins/jenkins-deployment.yaml) fourni dans le repo.
 
+On déploie Jenkins en executant :
+```sh 
+kubectl create -f jenkins-deployment.yaml
+```
 
+On crée un service s'appelant ```jenkins-service``` pour exposer le pod :
+```sh
+kubectl expose deployment jenkins --type=NodePort --name=jenkins-service
+```
 Pour afficher les services disponibles du cluster :
 ```sh
 kubectl get service
 ```
 
+### Pour accéder à Jenkins depuis l'extérieur
+
+> Attention, ceci expose le serveur à l'extérieur du réseau local. Pour ce Proof Of Concept (POC), nous n'avons pas besoin de nous soucier de ce niveau de sécurité car toutes les machines sont en DHCP sur un LAN protégé. 
+
+Puisque nos machines sont des machines Vagrant sans interface graphique, nous ne pouvons pas nous connecter sur localhost pour accéder à Jenkins. L'idée est donc d'utiliser nginx en mode reverse proxy. Le fichier de configuration nginx est disponible [ici](./nginx/jenkins). 
+
+Après avoir modifier ce fichier en ayant renseigné l'ip locale du service exposé, il faut copier ce fichier dans le repertoire ```/etc/nginx/sites-available``` et créer un lien symbolique :
+
+```sh
+sudo ln -s /etc/nginx/sites-available /etc/nginx/sites-enabled
+sudo systemctl reload nginx
+```
+
+> Rappel : pour afficher l'ip du service on execute la commande ```kubectl get services```
