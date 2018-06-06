@@ -355,7 +355,7 @@ Share Latex va nous permettre de rédiger un rapport de projet de manière colla
 
 ## Installation de Jenkins
 
-Pour afficher les services du cluster :
+Pour afficher les services disponibles du cluster :
 ```sh
 kubectl get service
 ```
