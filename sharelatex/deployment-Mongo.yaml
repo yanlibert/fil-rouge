@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
+  name: mongo
+  labels:
+    app: mongo
+spec:
+  type: NodePort
+  ports:
+  - port: 27017
+    name: mongo
+    targetPort: 80
+    nodePort: 32756
+  selector:
+    app: mongo
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mongodeployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mongo
+    spec:
+      containers:
+      - name: mongocontainer
+        image: mongo
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
