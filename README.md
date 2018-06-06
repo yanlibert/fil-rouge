@@ -21,6 +21,12 @@ Sans compter la phase de préparation, ce projet est conçu pour être livré en
       * [Creation des machines virtuelles](#creation-des-machines-virtuelles)
          * [Stockage de la box sur Vagrant Cloud](#stockage-de-la-box-sur-vagrant-cloud)
       * [Création du cluster Kubernetes](#création-du-cluster-kubernetes)
+         * [Master](#master)
+      * [Résolution d'un problème de réseau entre les nodes](#résolution-dun-problème-de-réseau-entre-les-nodes)
+      * [Test du cluster](#test-du-cluster)
+      * [Installation de Share Latex sur le cluster](#installation-de-share-latex-sur-le-cluster)
+      * [Installation de Jenkins](#installation-de-jenkins)
+         * [Pour accéder à Jenkins depuis l'extérieur](#pour-accéder-à-jenkins-depuis-lextérieur)
 
 ## Les membres de l'équipe
 
