@@ -11,7 +11,7 @@ spec:
   ports:
   - port: 27017
     name: mongo
-    targetPort: 80
+    targetPort: 27017
     nodePort: 32756
   selector:
     app: mongo
@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: mongocontainer
-        image: mongo
+        image: mongo:2.6
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 27017
