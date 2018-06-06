@@ -323,6 +323,28 @@ Il faut faire ce changement sur toutes les machines virtuelles de notre cluster.
 
 > TODO: ajouter ces modifications dans le packer.json
 
+## Test du cluster
+
+Pour lancer un déploiement test sur notre cluster, nous pouvons déployer hello-world avec cette commande :
+
+```sh
+kubectl run hello-world --replicas=1 --labels="run=load-balancer-example" --image=gcr.io/google-samples/node-hello:1.0  --port=8080
+```
+Puis vérifier que le conteneur se crée bien sur un des nodes :
+```sh
+watch kubectl get pods --all-namespaces
+```
+et
+
+```sh
+kubectl describe pod hello-world-5b446dd74b-l7kxd
+```
+
+Pour supprimer le déploiement on peut executer :
+
+```sh
+kubectl delete deployment hello-world 
+```
 
 ## Installation de Share Latex sur le cluster
 
