@@ -191,6 +191,7 @@ Une fois connecté sur le master, on peut initialiser le cluster :
 sudo kubeadm init
 ```
 Si le cluster se lance sur l'ip interne au lieu de l'ip externe, relancer l'init avec la commande 
+> Attention ! Ce n'est pas la bonne manière de traiter ce problème, cela ne fait que supprimer les syptômes d'un problème plus fondamental qui est traité [un peu plus bas.](#résolution-dun-problème-de-réseau-entre-les-nodes)
 
 ```sh
 sudo kubeadm init --apiserver-advertise-address <ip de la machine>
