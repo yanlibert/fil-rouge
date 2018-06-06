@@ -251,6 +251,78 @@ Pour voir les déployements sur le cluster :
 kubectl get deployments
 ```
 
+## Résolution d'un problème de réseau entre les nodes
+
+Symptôme : tous les pods lancés sur le cluster restent en ```ContainerCreating``` et ne se lancent jamais. 
+
+```kubectl describe pod <nom_du_pod>``` indique que le pod est bien alloué à un node mais le conteneur ne se lance pas. 
+
+```journalctl -fu kubelet``` indique :
+
+```txt
+cni.go:171] Unable to update cni config: No networks found in /etc/cni/net.d
+```
+
+Solution : il se trouve que Vagrant crée une machine virtuelle avec deux interfaces eth0 pour le réseau local et eth1 pour le réseau externe qui porte l'adresse ip externe. 
+On peut afficher l'interface par défaut en executant sur le master et les nodes la commande :
+```sh
+ip route list
+```
+Qui nous retourne :
+```txt
+default via 10.0.2.2 dev eth0 
+```
+Or ```kubeadm``` utilise l'interface par défaut du système pour créer le cluster. Il faut donc changer l'interface par défaut pour utiliser eth1
+
+D'abord il faut connaître l'ip de la passerelle. Elle se trouve dans le fichier :
+
+```sh
+cat /var/lib/dhcp/dhclient.eth1.leases 
+```
+```txt
+lease {
+  interface "eth1";
+  fixed-address 192.168.11.67;
+  filename "\\Boot\\x64\\wdsnbp.com";
+  server-name "nomduserver";
+  option subnet-mask 255.255.255.0;
+  option time-offset 7200;
+  option routers 192.168.11.254;
+  option dhcp-lease-time 604800;
+  option dhcp-message-type 5;
+  option domain-name-servers 172.16.0.15,8.8.8.8;
+  option dhcp-server-identifier 192.168.11.254;
+  option unknown-224 "FG100D3G14819332";
+  option dhcp-renewal-time 302400;
+  option dhcp-rebinding-time 529200;
+  option netbios-name-servers 172.16.0.15;
+  option domain-name "nomdudomain";
+  renew 5 2018/06/08 22:29:44;
+  rebind 2 2018/06/12 09:45:12;
+  expire 3 2018/06/13 06:45:12;
+}
+```
+
+Dans notre cas, l'ip de la passerelle est ```192.168.11.254```. Nous allons donc pouvoir reconfigurer l'interface par défaut : 
+
+```sh
+sudo ip route change to default dev eth1 via 192.168.11.254
+```
+
+On vérifie que la nouvelle interface par défaut est bien eth1 : 
+
+```sh
+ip route list
+```
+
+```txt
+default via 192.168.11.254 dev eth1 
+```
+Il faut faire ce changement sur toutes les machines virtuelles de notre cluster. 
+
+> TODO: ajouter ces modifications dans le packer.json
+
+
 ## Installation de Share Latex sur le cluster
 
 Share Latex va nous permettre de rédiger un rapport de projet de manière collaboratif. Sur le [github](https://github.com/sharelatex/sharelatex/wiki/Quick-Start-Guide) du projet nous avons à notre disposition un fichier Docker Compose. Il est possible d'adapter ce fichier pour créer un déployement sur notre cluster. 
