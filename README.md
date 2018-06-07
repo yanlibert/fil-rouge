@@ -358,19 +358,20 @@ kubectl delete deployment hello-world
 ## Installation de Share Latex sur le cluster
 
 Share Latex va nous permettre de rédiger un rapport de projet de manière collaboratif.
-Pour fonctionner, Share Latex à besoin de MongoDb (une base de donnée NOSQL) et de Redis (une base de données basée sur le principe clef => valeur).
+Pour fonctionner, Share Latex a besoin de MongoDb (une base de données NOSQL) et de Redis (une base de données basée sur le principe clef => valeur).
 
-Pour déployer ces dépendances, nous allons créer 3 fichier de déploiment sur le Master (YAML) (liens vers les fichiers).
+Pour déployer ces dépendances, nous allons créer 3 fichiers de déploiement sur le Master (YAML) (liens vers les fichiers).
 Les fichiers concernant le deploiement de Mongo et Redis auront deux fonctions principales :
 
 1)Créer un service
 Pour répondre à la problématique de réplication, nous devons regrouper nos pods via un service.
 Ce service va agir comme un nom de domaine et sera capable de gérer le load balancing.
+Si l'un des 2 noeuds tombe en panne , le second doit accueillir les pods de ce dernier.
 
 2)Créer le déploiement
-Cette étape consiste à configurer le pod en définissant notamment l'image qui sera utilisée, les ports nescessaires au bon fonctionnement de l'application, les variables d' environnement etc ...
+Cette étape consiste à configurer le pod en définissant notamment l'image qui sera utilisée, les ports nécessaires au bon fonctionnement de l'application, les variables d' environnement etc ...
 
-La création de fichiers étant terminé, nous pouvons passer au déploiement en ligne de commandes.
+La création de fichiers étant terminée, nous pouvons passer au déploiement en ligne de commandes.
 
 Déploiement de Mongo : 
 
@@ -380,11 +381,11 @@ Déploiement de Redis :
 
 kubectl create -f deployment-Redis.yaml
 
-Déploiement de Share Latex : 
+Les dépendances installées, nous pouvons procéder au déploiement de Share Latex : 
 
 kubectl create -f deployment-Sharelatex.yaml
 
-Informations sur les pods déployés : 
+Pour récupérer des informations sur l'état actuel des pods : 
 
 kubectl get pods
 
@@ -392,9 +393,24 @@ Informations détaillées sur un pod :
 
 kubectl logs [nom du pod]
 
-Nous pouvons maintenant voir si Share Latex est joignable : 
+Share Latex est maintenant joignable et prêt à l'utilisation.
 
+Quelques pistes pour le troobleshoting : 
 
+Lorsque un soucis survient lors d'un déploiement, plusieurs commandes permettent d'essayer d'isoler la source de ce dernier.
+Pour voir les logs : 
+
+kubectl logs [nom du pod]
+
+Concernant l'état actuel du déploiement, on peut utiliser : 
+
+kubectl describe [nom du pod]
+
+Lorsque vous souhaitez mettre à jour le déploiement, vous pouvez utiliser : 
+
+kubectl apply -f [nom du fichier de deploiement] 
+
+Si le deploiement n'existe pas, il sera crée. Si il existe il sera mis à jour.
 
 
 ## Installation de Jenkins
