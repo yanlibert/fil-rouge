@@ -1,0 +1,9 @@
+server {
+	listen 100 default_server;
+	server_name 192.168.11.67;
+
+        location / {
+                proxy_pass http://10.98.58.172:8095;
+        }
+
+}
